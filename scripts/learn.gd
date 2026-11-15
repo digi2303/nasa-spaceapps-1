@@ -531,6 +531,7 @@ func _build_ui() -> void:
 	button.size = icon.size
 	button.focus_mode = Control.FOCUS_NONE
 	button.tooltip_text = "Discovery Notebook (N)"
+	button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	var none := StyleBoxEmpty.new()
 	for state_name in ["normal", "hover", "pressed", "focus", "disabled"]:
 		button.add_theme_stylebox_override(state_name, none)
@@ -587,7 +588,7 @@ func _build_ui() -> void:
 		under.size = Vector2(318.0 - 26.0 * float(k), 2.0)
 		under.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		book.add_child(under)
-	var close := _write(PAGE_LEFT, 20, WRITE_X, write_w, "N or ESC: close the notebook", 15, PENCIL, hand)
+	var close := _write(PAGE_LEFT, 20, WRITE_X, write_w, "N, ESC or a click outside: close the notebook", 15, PENCIL, hand)
 	close.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 
 	for i in items.size():
@@ -695,7 +696,7 @@ func _refresh_ui() -> void:
 
 
 func _can_open() -> bool:
-	return not (main.game_over or main.cinematic or main.film.active or main.dialog_open or main.choice_open or main.touring)
+	return not (main.game_over or main.cinematic or main.film.active or main.dialog_open or main.choice_open or main.touring or main.menu_open)
 
 
 func toggle_book() -> void:
@@ -718,6 +719,11 @@ func hide_ui() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if book_open and event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT and not Rect2(BOOK_POS, BOOK_SIZE).has_point(event.position):
+			toggle_book()
+		get_viewport().set_input_as_handled()
+		return
 	if not (event is InputEventKey) or not event.pressed or event.echo:
 		return
 	if book_open:

@@ -116,4 +116,4 @@ func _label(text: String, font_size: int, color: Color, pos: Vector2, box: Vecto
 
 func _on_again() -> void:
 	Sfx.play("ui_click")
-	get_tree().change_scene_to_file("res://scenes/title.tscn")
+	Game.change_scene("res://scenes/title.tscn")

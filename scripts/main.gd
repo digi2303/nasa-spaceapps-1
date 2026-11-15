@@ -239,13 +239,13 @@ const TOUR := [
 	{"pos": Vector2(4900, 2490), "title": "RADIATION SHIELD",
 		"text": "When the Sun sends a solar flare, this shield protects everyone. It uses a lot: 3 bolts. Switch it ON only when a flare hits."},
 	{"pos": Vector2(4940, 800), "title": "THE MINE",
-		"text": "The miners dig up ore. Walk to a miner and press E to collect it. Every ore becomes 1 spare part."},
+		"text": "The miners dig up ore. Walk to a miner and {press} to collect it. Every ore becomes 1 spare part."},
 	{"pos": Vector2(4700, 3300), "title": "WORKSHOP",
 		"text": "No ore? The workshop can build a spare part, but each one costs 25 energy. Spare parts repair machines and build new ones."},
 	{"pos": Vector2(1460, 1880), "title": "EMPTY PLOTS",
 		"text": "Build here! A new solar panel costs 3 spare parts. A wind turbine costs 4, but it also works at night."},
 	{"pos": Vector2(3560, 1850), "title": "ANTENNA",
-		"text": "It sends the map picture and the storm warnings of Mars News. Rovers are parked by the roads: press E to drive one."},
+		"text": "It sends the map picture and the storm warnings of Mars News. Rovers are parked by the roads: {press} to drive one."},
 	{"pos": Vector2(760, 760), "title": "ROCKET PAD",
 		"text": "The President's rocket will land here in {sols} sols with the new settlers. Keep New Hope running until then!"},
 	{"title": "EVERY CHOICE HAS A COST",
@@ -272,31 +272,31 @@ const FAULTS := {
 		"reporter": "nova", "expert": "nova", "also": "dust",
 		"where": "The solar field is west of the town.",
 		"report": "Some of our solar panels are broken! A broken panel makes no energy at all.",
-		"how": "Walk to a broken panel and hold E. The repair uses 1 spare part. If you have no spare parts left, you can only put on a quick patch, and that falls off the next morning.",
-		"again": "You know what to do: hold E next to each broken panel.",
+		"how": "Walk to a broken panel and {hold}. The repair uses 1 spare part. If you have no spare parts left, you can only put on a quick patch, and that falls off the next morning.",
+		"again": "You know what to do: {hold} next to each broken panel.",
 		"task": "Fix the broken solar panels",
 	},
 	"dust": {
 		"reporter": "nova", "expert": "nova", "also": "",
 		"where": "The solar field is west of the town.",
 		"report": "Our solar panels are covered in dust! A dusty panel only makes half its energy.",
-		"how": "Dust blocks the sunlight. NASA's Mars rovers have lost power the same way. Wipe each panel clean: hold E next to it. It costs no spare parts, only time.",
-		"again": "Wipe each panel clean: hold E next to it. It costs nothing but time.",
+		"how": "Dust blocks the sunlight. NASA's Mars rovers have lost power the same way. Wipe each panel clean: {hold} next to it. It costs no spare parts, only time.",
+		"again": "Wipe each panel clean: {hold} next to it. It costs nothing but time.",
 		"task": "Wipe the dust off the solar panels",
 	},
 	"battery": {
 		"reporter": "nova", "expert": "nova", "also": "",
 		"where": "The battery stands in the solar field in the west, just below the panels.",
 		"report": "The battery is leaking energy! It wastes 2 bolts of power all the time.",
-		"how": "Walk to the battery and hold E. The repair uses 1 spare part. With no spare parts you can only patch it until tomorrow morning.",
-		"again": "Fix the battery: hold E next to it.",
+		"how": "Walk to the battery and {hold}. The repair uses 1 spare part. With no spare parts you can only patch it until tomorrow morning.",
+		"again": "Fix the battery: {hold} next to it.",
 		"task": "Fix the leaking battery",
 	},
 	"cable": {
 		"reporter": "ada", "expert": "nova", "also": "",
 		"where": "It is the pole next to the battery, in the solar field in the west.",
 		"report": "The lights keep flickering! Something must be wrong with the power line from the solar field.",
-		"how": "The power line carries energy from the solar field to the town. While it is broken, only half of the energy arrives. Walk to the pole next to the battery and hold E to repair it.",
+		"how": "The power line carries energy from the solar field to the town. While it is broken, only half of the energy arrives. Walk to the pole next to the battery and {hold} to repair it.",
 		"again": "Fix the power line pole next to the battery.",
 		"task": "Fix the power line",
 	},
@@ -304,15 +304,15 @@ const FAULTS := {
 		"reporter": "ada", "expert": "mira", "also": "",
 		"where": "The antenna stands right next to the Command Center, in the middle of the town.",
 		"report": "I cannot broadcast! The antenna is broken. There are no storm warnings, and the map picture is gone: your map only works as a simple radar now.",
-		"how": "The antenna sends the news and the map picture. Walk to it and hold E. The repair uses 1 spare part.",
-		"again": "Fix the antenna: hold E next to it.",
+		"how": "The antenna sends the news and the map picture. Walk to it and {hold}. The repair uses 1 spare part.",
+		"again": "Fix the antenna: {hold} next to it.",
 		"task": "Fix the antenna",
 	},
 	"drill": {
 		"reporter": "bo", "expert": "mira", "also": "",
 		"where": "The drill is at the mine, in the north-east.",
 		"report": "The mine drill is jammed! We cannot dig any ore until it is fixed.",
-		"how": "No drill means no ore, and no ore means no new spare parts. Walk to the drill at the mine and hold E to repair it.",
+		"how": "No drill means no ore, and no ore means no new spare parts. Walk to the drill at the mine and {hold} to repair it.",
 		"again": "Fix the drill and we will get back to digging.",
 		"task": "Fix the mine drill",
 	},
@@ -320,7 +320,7 @@ const FAULTS := {
 		"reporter": "sam", "expert": "leo", "also": "",
 		"where": "The oxygen machine is east of the town, across the road.",
 		"report": "People are getting dizzy. The oxygen machine has stopped working!",
-		"how": "The oxygen machine turns Mars air into air we can breathe. Walk to it and hold E to repair it. Then check that it is switched ON.",
+		"how": "The oxygen machine turns Mars air into air we can breathe. Walk to it and {hold} to repair it. Then check that it is switched ON.",
 		"again": "Fix the oxygen machine, then check that it is ON.",
 		"task": "Fix the oxygen machine",
 	},
@@ -328,7 +328,7 @@ const FAULTS := {
 		"reporter": "sam", "expert": "leo", "also": "",
 		"where": "Look for the red AIR LEAK! sign on a building.",
 		"report": "A meteorite hit a home! Air is leaking out.",
-		"how": "Mars has very thin air, so small space rocks reach the ground. Air escapes through the hole and our oxygen drops faster. Walk to the building and hold E to seal the hole. It uses 1 spare part.",
+		"how": "Mars has very thin air, so small space rocks reach the ground. Air escapes through the hole and our oxygen drops faster. Walk to the building and {hold} to seal the hole. It uses 1 spare part.",
 		"again": "Seal the hole before we lose too much air.",
 		"task": "Seal the air leak",
 	},
@@ -336,7 +336,7 @@ const FAULTS := {
 		"reporter": "tom", "expert": "tom", "also": "",
 		"where": "The greenhouse is in the south-west.",
 		"report": "The grow lights in the greenhouse went out! Without light the plants stop growing, and we will run out of food.",
-		"how": "Walk to the greenhouse and hold E. The repair uses 1 spare part. Then check that the lights are ON.",
+		"how": "Walk to the greenhouse and {hold}. The repair uses 1 spare part. Then check that the lights are ON.",
 		"again": "Fix the greenhouse lights, then check that they are ON.",
 		"task": "Fix the greenhouse lights",
 	},
@@ -412,6 +412,26 @@ class ErrandItem extends Node2D:
 		bob += delta
 		if art != null:
 			art.position.y = -16.0 - absf(sin(bob * 3.0)) * 8.0
+
+
+class TargetMarker extends Node2D:
+	var t := 0.0
+
+	func _ready() -> void:
+		z_index = 20
+		visible = false
+
+	func _process(delta: float) -> void:
+		if visible:
+			t += delta
+			queue_redraw()
+
+	func _draw() -> void:
+		var y: float = -absf(sin(t * 4.0)) * 6.0
+		var outline := PackedVector2Array([Vector2(-11, y - 14), Vector2(11, y - 14), Vector2(0, y + 2)])
+		var fill := PackedVector2Array([Vector2(-8, y - 12), Vector2(8, y - 12), Vector2(0, y - 1)])
+		draw_colored_polygon(outline, Color(0.07, 0.06, 0.1, 0.9))
+		draw_colored_polygon(fill, Color(1.0, 0.85, 0.3))
 
 
 var energy := START_ENERGY
@@ -502,6 +522,7 @@ var rocket_door: ColorRect
 var dust_puffs: Array = []
 var arrivals: Array = []          # [actor, where to walk to, seconds to wait before stepping out]
 
+var target_marker: TargetMarker
 var dialog_queue: Array = []
 var dialog_open := false
 var hold_target = null
@@ -523,6 +544,7 @@ var choice_enabled := [true, true]
 var choice_done := Callable()
 var after_dialog: Array = []      # things to do when the last dialog line has been closed
 
+var menu_open := false
 var touring := false              # the machine tour at the start of the game
 var tour_i := 0
 var tour_t := 0.0
@@ -551,7 +573,10 @@ func _ready() -> void:
 	film = FilmScript.new()
 	add_child(film)
 	film.setup(self)
-	hud.choice_picked.connect(_choose)
+	hud.choice_picked.connect(_on_choice_clicked)
+	hud.choice_hovered.connect(_on_choice_hovered)
+	hud.pause_resume.connect(_close_menu)
+	hud.pause_quit.connect(_quit_to_title)
 	hud.tour_skip.connect(_end_tour)
 	_schedule_events()
 	weather_start = rng.randi() % Game.weather().size()
@@ -707,6 +732,9 @@ func _build_world() -> void:
 	hud = HudScript.new()
 	add_child(hud)
 
+	target_marker = TargetMarker.new()
+	world.add_child(target_marker)
+
 
 # =====================================================================
 #  THE PLAN FOR THIS GAME (different every time you play)
@@ -835,7 +863,7 @@ func _after_intro() -> void:
 		_say("Mission Control", "Operator, this is Mission Control. Before you start, let us look around New Hope. Watch the screen: the camera will visit every machine.")
 		after_dialog.append(_start_tour)
 	else:
-		_say("Mission Control", "Watch your three bars: ENERGY, OXYGEN and FOOD. Walk to a machine and press E to switch it on or off. There is never enough power for everything, so every choice has a cost!")
+		_say("Mission Control", "Watch your three bars: ENERGY, OXYGEN and FOOD. Walk to a machine and {press} to switch it on or off. There is never enough power for everything, so every choice has a cost!")
 		after_dialog.append(_morning)
 
 
@@ -933,7 +961,9 @@ func _process(delta: float) -> void:
 		return
 	if choice_open:
 		choice_time += delta
-	Game.paused = dialog_open or choice_open or touring or learn.book_open
+	Game.paused = dialog_open or choice_open or touring or learn.book_open or menu_open
+	if learn.book_open or menu_open:
+		hold_target = null
 	if touring:
 		_update_tour(delta)
 		Game.player_pos = player.position
@@ -1934,6 +1964,19 @@ func _ask(speaker: String, title: String, text: String, options: Array, done: Ca
 	hud.show_choice(speaker, title, text, options, choice_sel)
 
 
+func _on_choice_hovered(i: int) -> void:
+	if not choice_open or i == choice_sel or not choice_enabled[i]:
+		return
+	choice_sel = i
+	Sfx.play("ui_move")
+	hud.set_choice_selected(choice_sel)
+
+
+func _on_choice_clicked(i: int) -> void:
+	if choice_time > 0.6:
+		_choose(i)
+
+
 func _choose(i: int) -> void:
 	if not choice_open or i < 0 or i > 1:
 		return
@@ -2028,7 +2071,7 @@ func _npc_lines(npc) -> Array:
 	if role == "engineer":
 		lines.append("I fix things and I can teach you how. When somebody has a problem, a ! shows over their head and on your map.")
 		lines.append("A repair uses 1 spare part and lasts. If you have no spare parts left, you can only put on a quick patch, and it falls off the next morning.")
-		lines.append("Out of spare parts? Collect ore from the miners, or press E at my workshop to build one. But the workshop uses a lot of energy!")
+		lines.append("Out of spare parts? Collect ore from the miners, or {press} at my workshop to build one. But the workshop uses a lot of energy!")
 	elif role == "doctor":
 		if flare_left > 0.0 and not shield.works():
 			lines.append("Radiation storm! Please switch the shield ON. Radiation can make everyone sick, even though we cannot see or feel it.")
@@ -2053,7 +2096,7 @@ func _npc_lines(npc) -> Array:
 			lines.append("I will warn everyone when a storm is on its way. Watch for my news flashes at the top of the screen.")
 	elif role == "technician":
 		lines.append("I look after the solar field. %d panels and %d wind turbines are making energy for us. Each one makes 1 bolt of power." % [panels.size() - _count_broken_panels(), turbines.size()])
-		lines.append("See the empty plots with a + sign? Stand on one and hold E to build. A solar panel costs %d spare parts and a wind turbine costs %d. Turbines also work at night." % [PANEL_COST, TURBINE_COST])
+		lines.append("See the empty plots with a + sign? Stand on one and {hold} to build. A solar panel costs %d spare parts and a wind turbine costs %d. Turbines also work at night." % [PANEL_COST, TURBINE_COST])
 	elif role == "farmer":
 		lines.append("Everything we eat grows in my greenhouse. The plants need light, so the grow lights must be ON. They use 2 bolts of power.")
 		lines.append("NASA grows lettuce in space the same way: under LED lights, in a little garden on the International Space Station.")
@@ -2146,7 +2189,7 @@ func _enter_rover(v) -> void:
 	player.position = v.position
 	hold_target = null
 	Sfx.play("door")
-	hud.toast("Driving! Arrow keys to steer, E to get out.")
+	hud.toast("Driving! Arrow keys to steer, {press} to get out.")
 
 
 func _exit_rover() -> void:
@@ -2208,7 +2251,7 @@ func _drive(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if game_over:
 		return
-	if Game.DEV_KEYS and event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F9:
+	if Game.dev_keys() and event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F9:
 		_dev_skip()
 		return
 	if film.active:
@@ -2216,16 +2259,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_ESCAPE:
 			film.skip()
 		elif event.is_action_pressed("interact") and dialog_open:
-			_next_dialog()
+			_advance_dialog()
 		return
 	if touring:
 		if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_ESCAPE:
 			_end_tour()
 		elif event.is_action_pressed("interact"):
-			if tour_t < 1.0:
+			if hud.tour_typing():
+				hud.finish_tour_typing()
+			elif tour_t < 1.0:
 				tour_t = 1.0
 			else:
 				_tour_next()
+		return
+	if learn.book_open:
 		return
 	if choice_open:
 		if event.is_action_pressed("move_left") or event.is_action_pressed("move_right"):
@@ -2237,14 +2284,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.is_action_pressed("interact") and choice_time > 0.6:
 			_choose(choice_sel)
 		return
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_ESCAPE:
+		if menu_open:
+			_close_menu()
+		elif not (cinematic or dialog_open):
+			_open_menu()
+		return
+	if menu_open:
+		return
 	if not event.is_action_pressed("interact"):
 		return
 	if cinematic:
 		if dialog_open:
-			_next_dialog()
+			_advance_dialog()
 		return
 	if dialog_open:
-		_next_dialog()
+		_advance_dialog()
 		return
 	if driving != null:
 		_exit_rover()
@@ -2261,6 +2316,28 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif act["mode"] == "hold":
 		hold_target = t
 		hold_time = _saved_hold_time(t, act)
+
+
+func _open_menu() -> void:
+	menu_open = true
+	hold_target = null
+	Game.paused = true
+	hud.show_pause()
+
+
+func _close_menu() -> void:
+	if not menu_open:
+		return
+	menu_open = false
+	hud.hide_pause()
+
+
+func _quit_to_title() -> void:
+	menu_open = false
+	game_over = true
+	Game.paused = false
+	Sfx.stop_loops()
+	Game.change_scene("res://scenes/title.tscn")
 
 
 func _rect_dist(box: Rect2, p: Vector2) -> float:
@@ -2326,57 +2403,57 @@ func _action_for(t) -> Dictionary:
 	var what: String = t.what
 	if what == "npc":
 		if t.role == "miner" and t.ore > 0 and not _npc_has_quest(t):
-			return _act("Press E: take %d ore from %s" % [t.ore, t.npc_name], "press", 0.0)
-		return _act("Press E: talk to %s" % t.npc_name, "press", 0.0)
+			return _act(Game.press_text("take %d ore from %s" % [t.ore, t.npc_name]), "press", 0.0)
+		return _act(Game.press_text("talk to %s" % t.npc_name), "press", 0.0)
 	if what == "learn":
-		return _act("Press E: see what the ? is", "press", 0.0)
+		return _act(Game.press_text("see what the ? is"), "press", 0.0)
 	if what == "item":
-		return _act("Press E: pick up the %s" % t.title, "press", 0.0)
+		return _act(Game.press_text("pick up the %s" % t.title), "press", 0.0)
 	if what == "vehicle":
-		return _act("Press E: drive the rover (it stays on the roads and uses a little energy)", "press", 0.0)
+		return _act(Game.press_text("drive the rover (it stays on the roads and uses a little energy)"), "press", 0.0)
 
 	var kind: String = t.kind
 	if kind == "plot_solar":
 		if parts >= PANEL_COST:
-			return _act("Hold E: build a solar panel here (costs %d spare parts)" % PANEL_COST, "hold", 3.0)
+			return _act(Game.hold_text("build a solar panel here (costs %d spare parts)" % PANEL_COST), "hold", 3.0)
 		return _act("Empty plot: you need %d spare parts to build a solar panel here" % PANEL_COST, "none", 0.0)
 	if kind == "plot_wind":
 		if parts >= TURBINE_COST:
-			return _act("Hold E: build a wind turbine here (costs %d spare parts)" % TURBINE_COST, "hold", 3.0)
+			return _act(Game.hold_text("build a wind turbine here (costs %d spare parts)" % TURBINE_COST), "hold", 3.0)
 		return _act("Empty plot: you need %d spare parts to build a wind turbine here" % TURBINE_COST, "none", 0.0)
 
 	if kind == "bench":
-		return _act("Press E: sit down and rest (health comes back faster while you sit)", "press", 0.0)
+		return _act(Game.press_text("sit down and rest (health comes back faster while you sit)"), "press", 0.0)
 
 	var fault: String = _fault_of(t)
 	if fault != "":
 		if not _knows_fix(fault):
 			return _act("Something is wrong here. Follow the ! on your %s to find out what to do." % _map_word(), "none", 0.0)
 		if fault == "dust":
-			return _act("Hold E: wipe the dust off this solar panel", "hold", 1.5)
+			return _act(Game.hold_text("wipe the dust off this solar panel"), "hold", 1.5)
 		# With a spare part the repair lasts. With none, a quick patch holds until tomorrow morning.
 		if fault == "leak":
 			if parts > 0:
-				return _act("Hold E: seal the hole in %s (uses 1 spare part)" % str(t.title), "hold", REPAIR_SECONDS)
-			return _act("Hold E: patch the hole in %s (no spare parts, so the patch falls off tomorrow)" % str(t.title), "hold", PATCH_SECONDS)
+				return _act(Game.hold_text("seal the hole in %s (uses 1 spare part)" % str(t.title)), "hold", REPAIR_SECONDS)
+			return _act(Game.hold_text("patch the hole in %s (no spare parts, so the patch falls off tomorrow)" % str(t.title)), "hold", PATCH_SECONDS)
 		var thing: String = str(t.title).to_lower()
 		if parts > 0:
-			return _act("Hold E: repair the %s (uses 1 spare part)" % thing, "hold", REPAIR_SECONDS)
-		return _act("Hold E: quick patch on the %s (no spare parts, so it falls off tomorrow)" % thing, "hold", PATCH_SECONDS)
+			return _act(Game.hold_text("repair the %s (uses 1 spare part)" % thing), "hold", REPAIR_SECONDS)
+		return _act(Game.hold_text("quick patch on the %s (no spare parts, so it falls off tomorrow)" % thing), "hold", PATCH_SECONDS)
 
 	if kind == "workshop":
 		if energy >= WORKSHOP_COST + 5.0:
-			return _act("Press E: build 1 spare part (costs %d energy)" % int(WORKSHOP_COST), "press", 0.0)
+			return _act(Game.press_text("build 1 spare part (costs %d energy)" % int(WORKSHOP_COST)), "press", 0.0)
 		return _act("Workshop: not enough energy to build a spare part", "none", 0.0)
 	if t.switchable:
 		var info: Dictionary = SWITCHES.get(kind, {})
 		var label: String = str(info.get("name", str(t.title).to_lower()))
 		var bolts: int = int(info.get("bolts", 2))
 		if t.is_on:
-			return _act("Press E: switch the %s OFF  (saves %d bolts, but %s)" % [label, bolts, str(info.get("off", "it stops working"))], "press", 0.0)
+			return _act(Game.press_text("switch the %s OFF  (saves %d bolts, but %s)" % [label, bolts, str(info.get("off", "it stops working"))]), "press", 0.0)
 		if energy < 3.0:
 			return _act("No power! The battery is empty.", "none", 0.0)
-		return _act("Press E: switch the %s ON  (uses %d bolts: %s)" % [label, bolts, str(info.get("on", "it starts working"))], "press", 0.0)
+		return _act(Game.press_text("switch the %s ON  (uses %d bolts: %s)" % [label, bolts, str(info.get("on", "it starts working"))]), "press", 0.0)
 	if t.patched:
 		return _act("%s: patched. The patch falls off tomorrow morning." % str(t.title), "none", 0.0)
 	if kind == "panel":
@@ -2534,6 +2611,13 @@ func _say(speaker: String, text: String) -> void:
 		_next_dialog()
 
 
+func _advance_dialog() -> void:
+	if hud.is_typing():
+		hud.finish_typing()
+		return
+	_next_dialog()
+
+
 func _next_dialog() -> void:
 	if dialog_queue.is_empty():
 		dialog_open = false
@@ -2660,20 +2744,24 @@ func _update_hud() -> void:
 			marks.append([v.position, "rover"])
 	hud.set_minimap(player.position, marks, antenna.broken)
 
-	if dialog_open or choice_open or touring or film.active:
+	target_marker.visible = false
+	if dialog_open or choice_open or touring or film.active or menu_open:
 		hud.set_prompt("")
 		hud.set_hold(-1.0)
 		return
 	if driving != null:
-		hud.set_prompt("Press E: get out of the rover")
+		hud.set_prompt(Game.press_text("get out of the rover"))
 		hud.set_hold(-1.0)
 		return
 	if details.sitting():
-		hud.set_prompt("Resting on the bench...   Press E or walk away to stand up")
+		hud.set_prompt("Resting on the bench...   %s or walk away to stand up" % Game.KEYS)
 		hud.set_hold(-1.0)
 		return
 	var t = _find_target()
 	var saved_progress: float = _saved_progress(t)
+	if t != null and is_instance_valid(t) and str(_action_for(t)["text"]) != "":
+		target_marker.visible = true
+		target_marker.position = t.position - Vector2(0, _marker_height(t))
 	if t == null:
 		hud.set_prompt("")
 	elif saved_progress > 0.0 and hold_target == null:
@@ -2687,6 +2775,21 @@ func _update_hud() -> void:
 		hud.set_hold(saved_progress)
 	else:
 		hud.set_hold(-1.0)
+
+
+func _marker_height(t) -> float:
+	if t.what == "npc":
+		if t.alert != null and t.alert.visible:
+			return 172.0
+		return 104.0
+	if t.what == "vehicle":
+		return 64.0
+	if t.what == "item" or t.what == "learn":
+		return 66.0
+	var top: float = minf(float(t.art_h) + 26.0, 196.0)
+	if t.badge.visible:
+		return top + 8.0
+	return top - 14.0
 
 
 func _saved_progress(t) -> float:
@@ -2735,6 +2838,7 @@ func _start_arrival() -> void:
 		piece["node"].queue_free()
 	flying.clear()
 	hold_target = null
+	target_marker.visible = false
 	dialog_queue.clear()
 	after_dialog.clear()
 	dialog_open = false
@@ -2785,6 +2889,7 @@ func _make_rocket() -> void:
 	rocket_door.color = Color(0.1, 0.08, 0.1)
 	rocket_door.position = Vector2(-14, -146)
 	rocket_door.size = Vector2(26, 46)
+	rocket_door.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	rocket_door.visible = false
 	rocket.add_child(rocket_door)
 
@@ -2947,7 +3052,7 @@ func _finish(won: bool, reason: String) -> void:
 		"discoveries_total": learn.items.size(),
 		"stats": stats,
 	}
-	get_tree().change_scene_to_file("res://scenes/end.tscn")
+	Game.change_scene("res://scenes/end.tscn")
 
 
 func _start_collapse(reason: String) -> void:
@@ -2958,6 +3063,7 @@ func _start_collapse(reason: String) -> void:
 		piece["node"].queue_free()
 	flying.clear()
 	hold_target = null
+	target_marker.visible = false
 	dialog_queue.clear()
 	after_dialog.clear()
 	dialog_open = false

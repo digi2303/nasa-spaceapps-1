@@ -258,6 +258,7 @@ var f_slant: FontVariation
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	Sfx.music("music_calm")
 	_make_fonts()
 
@@ -309,8 +310,6 @@ func _make_fonts() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		_next()
-	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		_next()
 
 
@@ -463,4 +462,4 @@ func _text(parent: Control, text: String, font: Font, font_size: int, color: Col
 
 
 func _start_game() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Game.change_scene("res://scenes/main.tscn")
